@@ -1,0 +1,22 @@
+{
+  "name": "study-typescript",
+  "version": "1.0.0",
+  "description": "study typescript",
+  "main": "test.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/huzhanzhao/TS.git"
+  },
+  "author": "mikael_konstan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/huzhanzhao/TS/issues"
+  },
+  "homepage": "https://github.com/huzhanzhao/TS#readme",
+  "devDependencies": {
+    "typescript": "^4.1.5"
+  }
+}
