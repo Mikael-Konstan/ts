@@ -15,6 +15,10 @@ class Student {
     ppp: () => {}; // 函数  返回对象
     qqq: () => string; // 函数  返回字符串
     rrr: () => void; // 函数  没有返回值
+    // any 泛型
+    // enum 枚举
+    // void 没有任何类型 只能赋值null undefined
+    // never 永不存在的值的类型  抛出异常 或者没有返回值的函数
     constructor(public firstName, public middleInitial, public lastName) {
         // public 相当于直接申明一个属性
         this.fullName = firstName + " " + middleInitial + " " + lastName;
@@ -26,6 +30,12 @@ class Student {
         console.log(this.firstName)
     }
 }
+
+// 类型断言 类似其他语言的强制类型转换 只在编译阶段起作用
+let someValue: any = "this is a string";
+let strLength1: number = (<string>someValue).length // 尖括号
+let strLength2: number = (someValue as string).length // as语法
+// 使用 JSX 时  只允许使用 as 语法
 
 interface Person { // 接口/注解 用来描述集合  赋值时，变量值和接口保持一致 不能多不能少
     firstName: string;
@@ -60,11 +70,6 @@ CB = (fn: () => number) => {
     return 'ssss'
 }
 
-// 类型断言 类似其他语言的强制类型转换
-let someValue: any = "this is a string";
-let strLength1: number = (<string>someValue).length // 尖括号
-let strLength2: number = (someValue as string).length // as语法
-
 // 剩余参数
 function restParams(firstName: string, ...restOfName: string[]) {
     return firstName + " " + restOfName.join(" ");
@@ -97,6 +102,6 @@ heavyLoad('a')
 heavyLoad(1)
 document.body.innerHTML = greeter(user);
 
-// 同一个文件夹下，其它文件里不能有同样的变量定义
+// 同一个文件夹下，其它文件里不能有同样的变量定义  declare
 // 只要文件存在 import 或 export 关键字，都被视为 module
 export {}
