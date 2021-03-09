@@ -1,5 +1,5 @@
 class Student {
-    fullName: string; //在次申明对象属性
+    fullName: string; // 在此申明对象属性
     aaa: string;
     bbb: number;
     ccc: boolean;
@@ -101,6 +101,20 @@ function heavyLoad(param1: string | number): string | number {
 heavyLoad('a')
 heavyLoad(1)
 document.body.innerHTML = greeter(user);
+
+
+// 枚举
+enum Enum {
+    A
+}
+let a = Enum.A;
+let nameOfA = Enum[a]; // "A"
+console.log(nameOfA)
+
+const enum EnumConst {
+    A = 1,
+    B = A * 2
+}
 
 // 同一个文件夹下，其它文件里不能有同样的变量定义  declare
 // 只要文件存在 import 或 export 关键字，都被视为 module
